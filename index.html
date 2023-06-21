@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -57,10 +57,10 @@
                 max-width: 320px;
             }
         }
+
         .swiper-button-next, .swiper-button-prev {
             color: yellow !important; /* Add color here */
         }
-
     </style>
 </head>
 <body>
@@ -68,7 +68,7 @@
         <source src="I Just Called To Say I Love You (Chorus).mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
- 
+
     <div class="swiper-container">
         <div class="swiper-wrapper">
 
@@ -148,51 +148,53 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-    const swiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
+        const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
 
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-
-        // Enable keyboard control
-        keyboard: {
-            enabled: true,
-            onlyInViewport: false,
-        },
-
-        // Add some nice transition effect
-        effect: 'coverflow',
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-        },
-
-        // Swiper event listeners
-        on: {
-            slideChange: function () {
-                const audio = document.querySelector('audio');
-                if (this.isBeginning && audio.paused) {
-                    audio.play();
-                } else if (!this.isBeginning && !audio.paused) {
-                    audio.pause();
-                }
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
-        },
-    });
-</script>
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+
+            // Enable keyboard control
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+
+            // Add some nice transition effect
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+
+            // Swiper event listeners
+            on: {
+                slideChange: function () {
+                    const audio = document.querySelector('audio');
+                    if (this.activeIndex === 1 || this.activeIndex === 2 || this.activeIndex === 3 || this.activeIndex === 4 || this.activeIndex === 5 || this.activeIndex === 6 || this.activeIndex === 7 || this.activeIndex === 8 || this.activeIndex === 9 || this.activeIndex === 10 || this.activeIndex === 11|| this.activeIndex === 12 || this.activeIndex === 13 || this.activeIndex === 14 || this.activeIndex === 15 || this.activeIndex === 16  &&audio.paused) {
+                        audio.play();
+                    } else if (this.activeIndex !== 1 && !audio.paused) {
+                        audio.pause();
+                    }
+                },
+            },
+        });
+    </script>
+
+
 
 </body>
 </html>
