@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Grandma's Birthday</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, pink, purple);
+        }
+
+        .swiper-container {
+            width: 80%;
+            height: 80%;
+        }
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+            .swiper-slide img {
+                width: 100%;
+                max-width: 800px;
+                height: auto;
+                object-fit: cover;
+                margin: auto;
+                border: 3px solid yellow; /* Add border here */
+            }
+
+            .swiper-slide .slide-caption {
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: orangered; /* Changed text color to orange */
+                font-size: 20px;
+                background-color: lightblue; /* Background color is blue */
+                padding: 15px;
+                border-radius: 15px;
+                max-width: 600px;
+            }
+
+
+        @media screen and (max-width: 1200px) {
+            .swiper-slide img {
+                max-width: 320px;
+            }
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: yellow !important; /* Add color here */
+        }
+
+    </style>
+</head>
+<body>
+    <audio controls autoplay loop>
+        <source src="I Just Called To Say I Love You (Chorus).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+ 
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="savta2.jpg" alt="Photo 2">
+                <p class="slide-caption">לאישה</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta3.jpg" alt="Photo 3">
+                <p class="slide-caption">הכי</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta4.png" alt="Photo 3">
+                <p class="slide-caption">חכמה</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta5.jpg" alt="Photo 3">
+                <p class="slide-caption">יפה</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta6.jpg" alt="Photo 3">
+                <p class="slide-caption">אדיבה</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta7.jpg" alt="Photo 3">
+                <p class="slide-caption">מוכשרת</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta8.jpg" alt="Photo 3">
+                <p class="slide-caption">שיש</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta9.jpg" alt="Photo 3">
+                <p class="slide-caption">את הכי יקרה לי בעולם</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta10.jpg" alt="Photo 3">
+                <p class="slide-caption">תמיד לימדת אותי, תמיד עזרת לי תמיד אהבת אותי ואני אותך</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta11.jpg" alt="Photo 3">
+                <p class="slide-caption">לא יכולתי לבקש סבתא יותר טובה ממך</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta12.jpg" alt="Photo 3">
+                <p class="slide-caption">סבתא שתמיד דואגת, מקשיבה ותומכת</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta13.jpg" alt="Photo 3">
+                <p class="slide-caption">את גאה בי ואני בך</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta31.jpg" alt="Photo 3">
+                <p class="slide-caption">מזל טוב </p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta14.jpg" alt="Photo 3">
+                <p class="slide-caption">סבתא היקרה</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta15.jpg" alt="Photo 3">
+                <p class="slide-caption">מנכדך</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="savta1.jpg" alt="Photo 3">
+                <p class="slide-caption">נועם</p>
+            </div>
+        </div>
+
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+
+            // Enable keyboard control
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+
+            // Add some nice transition effect
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+        });
+    </script>
+
+
+</body>
+</html>
