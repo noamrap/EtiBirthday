@@ -35,7 +35,7 @@
                 height: auto;
                 object-fit: cover;
                 margin: auto;
-                border: 3px solid yellow; /* Add border here */
+                border: 3px solid yellow;
             }
 
             .swiper-slide .slide-caption {
@@ -43,13 +43,27 @@
                 bottom: 30px;
                 left: 50%;
                 transform: translateX(-50%);
-                color: orangered; /* Changed text color to orange */
+                color: orangered;
                 font-size: 20px;
-                background-color: lightblue; /* Background color is blue */
+                background-color: lightblue;
                 padding: 15px;
                 border-radius: 15px;
                 max-width: 600px;
             }
+
+        .swipe-indicator {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            z-index: 10;
+        }
 
 
         @media screen and (max-width: 1200px) {
@@ -59,7 +73,7 @@
         }
 
         .swiper-button-next, .swiper-button-prev {
-            color: yellow !important; /* Add color here */
+            color: yellow !important;
         }
     </style>
 </head>
@@ -73,6 +87,7 @@
         <div class="swiper-wrapper">
 
             <div class="swiper-slide">
+                <div class="swipe-indicator">החלק ימינה על מנת לצפות בתמונות</div>
                 <img src="savta2.jpg" alt="Photo 2">
                 <p class="slide-caption">לאישה</p>
             </div>
@@ -138,11 +153,8 @@
             </div>
         </div>
 
-
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-
-
         <div class="swiper-scrollbar"></div>
     </div>
 
@@ -184,7 +196,7 @@
             on: {
                 slideChange: function () {
                     const audio = document.querySelector('audio');
-                    if (this.activeIndex === 1 || this.activeIndex === 2 || this.activeIndex === 3 || this.activeIndex === 4 || this.activeIndex === 5 || this.activeIndex === 6 || this.activeIndex === 7 || this.activeIndex === 8 || this.activeIndex === 9 || this.activeIndex === 10 || this.activeIndex === 11|| this.activeIndex === 12 || this.activeIndex === 13 || this.activeIndex === 14 || this.activeIndex === 15 || this.activeIndex === 16  &&audio.paused) {
+                    if (this.activeIndex === 1 || this.activeIndex === 2 || this.activeIndex === 3 || this.activeIndex === 4 || this.activeIndex === 5 || this.activeIndex === 6 || this.activeIndex === 7 || this.activeIndex === 8 || this.activeIndex === 9 || this.activeIndex === 10 || this.activeIndex === 11 || this.activeIndex === 12 || this.activeIndex === 13 || this.activeIndex === 14 || this.activeIndex === 15 || this.activeIndex === 16 && audio.paused) {
                         audio.play();
                     } else if (this.activeIndex !== 1 && !audio.paused) {
                         audio.pause();
@@ -193,8 +205,5 @@
             },
         });
     </script>
-
-
-
 </body>
 </html>
